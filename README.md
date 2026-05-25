@@ -1,42 +1,32 @@
-# Projeto de Data Warehouse e Analytics
+# Projeto Prático: Data Warehouse e Analytics 📊
 
-Bem-vindo ao repositório do **Projeto de Data Warehouse e Analytics**! 🚀
-Este projeto demonstra uma solução completa de *data warehousing* e *analytics*, desde a construção do data warehouse até a geração de *insights* acionáveis. Desenvolvido como um projeto de portfólio, ele destaca as melhores práticas de mercado em engenharia de dados e análise de dados.
+Fala, pessoal! Bem-vindos ao repositório do meu projeto de Data Warehouse e Analytics. 
 
----
-
-## 🚀 Requisitos do Projeto
-
-### Construindo o Data Warehouse (Engenharia de Dados)
-
-#### Objetivo
-Desenvolver um data warehouse moderno utilizando SQL Server para consolidar dados de vendas, viabilizando relatórios analíticos e a tomada de decisão baseada em dados.
-
-#### Especificações
-- **Fontes de Dados (Data Sources):** Importar dados de dois sistemas de origem (ERP e CRM) disponibilizados como arquivos CSV.
-- **Qualidade de Dados (Data Quality):** Limpar e tratar problemas de qualidade nos dados antes da análise.
-- **Integração:** Combinar ambas as fontes em um modelo de dados único e intuitivo, projetado para consultas analíticas.
-- **Escopo:** Focar apenas no *dataset* mais recente; a historização dos dados não é necessária para este escopo.
-- **Documentação:** Fornecer uma documentação clara do modelo de dados para apoiar tanto as áreas de negócio (*stakeholders*) quanto as equipes de *analytics*.
+Construí esse projeto do zero para aplicar na prática o que venho estudando sobre engenharia e análise de dados, simulando um cenário real do mercado. A ideia foi pegar dados bagunçados e transformar em informações que ajudem a tomar decisões de negócio.
 
 ---
 
-### BI: Analytics e Relatórios (Data Analytics)
+## 🚀 O que foi feito no projeto?
 
-#### Objetivo
-Desenvolver análises baseadas em SQL para entregar *insights* detalhados sobre:
-- **Comportamento do Cliente**
-- **Desempenho do Produto**
-- **Tendências de Vendas**
+### 1. Engenharia de Dados (Construção do Data Warehouse)
+O desafio aqui foi consolidar dados de vendas que vieram de dois sistemas diferentes (um ERP e um CRM, no formato CSV) e organizar tudo em um Data Warehouse utilizando o **SQL Server**.
 
-Esses *insights* capacitam os *stakeholders* com métricas-chave de negócio, viabilizando a tomada de decisão estratégica.
+O que eu apliquei na prática:
+- **Data Quality:** Limpeza e tratamento para resolver problemas nos dados originais.
+- **Integração:** União das duas fontes (ERP e CRM) em um modelo de dados único e organizado.
+- **Escopo:** Trabalhei com os dados mais recentes para simplificar a análise inicial, sem necessidade de historização complexa nesta etapa.
+- **Documentação:** O modelo de dados foi desenhado para ser intuitivo, facilitando a vida de quem for plugar uma ferramenta de BI depois.
+
+### 2. Data Analytics (BI e Relatórios)
+Com o Data Warehouse pronto e os dados limpos, a segunda etapa foi usar **SQL** para extrair valor de verdade. Criei consultas analíticas para responder perguntas como:
+- Como é o comportamento dos nossos clientes?
+- Qual é o desempenho de cada produto?
+- Quais são as principais tendências de vendas?
 
 ---
-
-## 🛡️ Licença
-
-Este projeto está licenciado sob a [Licença MIT](LICENSE). Você é livre para usar, modificar e compartilhar este projeto com a devida atribuição.
 
 ## 🌟 Sobre Mim
 
-Olá! Eu sou **Davi Magliari**. Sou um estudante de Tecnologia em Banco de Dados apaixonado por tecnologia e dados, com foco em construir soluções eficientes que transformam dados brutos em inteligência de negócio.
+Eu sou o **Davi Magliari**, estudante de Tecnologia em Banco de Dados na **Universidade Presbiteriana Mackenzie**. 
+
+Sou apaixonado por tecnologia e desenvolvo esses projetos práticos justamente para treinar, colocar a mão na massa e me preparar para os desafios reais do mercado de trabalho. Meu foco é evoluir cada vez mais na habilidade de transformar dados brutos em inteligência para o negócio.
