@@ -1,0 +1,42 @@
+/*
+=============================================================
+Criação do Banco de Dados e Schemas
+=============================================================
+Objetivo do Script:
+    Este script cria um novo banco de dados chamado 'DataWarehouse' após verificar se ele já existe.
+    Se o banco de dados existir, ele será apagado (dropped) e recriado. Além disso, o script configura três schemas
+    dentro do banco de dados: 'bronze', 'silver' e 'gold'.
+
+AVISO:
+    A execução deste script apagará todo o banco de dados 'DataWarehouse' se ele existir.
+    Todos os dados no banco serão excluídos permanentemente. Proceda com cautela
+    e certifique-se de ter backups adequados antes de executar este script.
+*/
+
+USE master;
+GO
+
+-- Apaga e recria o banco de dados 'DataWarehouse'
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
+BEGIN
+    ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE DataWarehouse;
+END;
+GO
+
+-- Cria o banco de dados 'DataWarehouse'
+CREATE DATABASE DataWarehouse;
+GO
+
+USE DataWarehouse;
+GO
+
+-- Cria os Schemas
+CREATE SCHEMA bronze;
+GO
+
+CREATE SCHEMA silver;
+GO
+
+CREATE SCHEMA gold;
+GO
