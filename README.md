@@ -56,3 +56,9 @@ sql-data-warehouse-project/
 │   ├── quality_checks_silver.sql
 │   └── quality_checks_gold.sql
 └── README.md                   # Visão geral do projeto
+
+🌟 Sobre Mim
+
+Eu sou o Davi Magliari, estudante de Tecnologia em Banco de Dados na Universidade Presbiteriana Mackenzie.
+
+Desenvolvo projetos práticos com foco em Engenharia e Análise de Dados para consolidar conceitos de arquitetura de dados, modelagem dimensional e otimização de queries, preparando meu perfil para os desafios reais e técnicos do mercado de tecnologia.
