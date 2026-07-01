@@ -8,32 +8,32 @@ Construí esse projeto do zero para aplicar na prática o que venho estudando so
 
 ## 🚀 Project Overview (Visão Geral do Projeto)
 
-Este projeto engloba todo o ciclo de vida dos dados, focando em:
-1. **Data Architecture:** Desenho de um Data Warehouse moderno utilizando a **Medallion Architecture** (camadas Bronze, Silver e Gold).
-2. **ETL Pipelines:** Extração, limpeza e carga de dados dos sistemas de origem utilizando SQL Server.
-3. **Data Modeling:** Desenvolvimento de tabelas Fato e Dimensão otimizadas para consultas analíticas (Star Schema).
-4. **Data Analytics:** Criação de consultas SQL (Data Quality checks e relatórios) para responder perguntas de negócio e extrair tendências.
+O escopo do projeto abrange todo o pipeline de dados, estruturado nas seguintes etapas:
+1. **Data Architecture:** Desenho e implementação de um Data Warehouse moderno utilizando a **Medallion Architecture** (camadas Bronze, Silver e Gold).
+2. **ETL Pipelines:** Processos de extração, limpeza, padronização e carga de dados utilizando SQL Server.
+3. **Data Modeling:** Desenvolvimento de tabelas Fato e Dimensão sob o modelo **Star Schema**, otimizado para alta performance em consultas analíticas.
+4. **Data Analytics:** Implementação de validações de qualidade de dados (Quality Checks) e scripts para geração de relatórios de negócios.
 
 ---
 
 ## 🛠️ Important Links & Tools (Ferramentas Utilizadas)
 
-* **SQL Server Express & SSMS:** Motor de banco de dados e interface para gerenciamento e criação de todos os scripts DDL e DML.
-* **GitHub:** Versionamento de código e documentação estruturada (Docs as Code).
-* **Notion:** Gerenciamento das etapas do projeto (Kanban) e organização de requisitos.
-* **Mermaid JS:** Utilizado para desenhar a arquitetura de dados, fluxos de ETL e a modelagem Entidade-Relacionamento nativamente via código (Markdown), substituindo ferramentas estáticas de imagem.
+* **SQL Server Express & SSMS:** Motor de banco de dados e interface para desenvolvimento de todos os scripts DDL e DML.
+* **GitHub:** Versionamento de código e repositório central da documentação.
+* **Notion:** Planejamento ágil, gerenciamento do backlog de tarefas e levantamento de requisitos.
+* **Mermaid JS:** Ferramenta utilizada para a criação de diagramas de arquitetura, fluxos de ETL e modelagem de dados diretamente via código (Docs as Code), garantindo uma documentação técnica limpa e de fácil manutenção.
 
 ---
 
 ## 🏗️ Data Architecture (Arquitetura de Dados)
 
-A arquitetura segue o padrão Medallion em três camadas principais para garantir a governança e a qualidade da informação:
+O fluxo de dados segue o padrão de arquitetura Medalhão, garantindo a governança, rastreabilidade e qualidade da informação em cada etapa:
 
-* **🥉 Bronze Layer:** Armazena os dados brutos (*raw data*) exatamente como vieram dos sistemas de origem.
-* **🥈 Silver Layer:** Camada de limpeza, padronização e normalização. Integra os dados do ERP e CRM, resolvendo inconsistências.
-* **🥇 Gold Layer:** Camada final de negócios, modelada em **Star Schema** (tabelas Fato e Dimensão), pronta para consumo ágil por ferramentas de BI e análises avançadas.
+* **🥉 Bronze Layer:** Armazenamento dos dados brutos (*raw data*) extraídos diretamente dos sistemas de origem, sem alterações.
+* **🥈 Silver Layer:** Camada de consolidação e qualidade. Realiza a limpeza, padronização de tipos de dados, tratamento de nulos e integração das fontes ERP e CRM.
+* **🥇 Gold Layer:** Camada de negócios modelada em **Star Schema** (tabelas Fato e Dimensão), estruturada e indexada para consumo por ferramentas de BI e relatórios gerenciais.
 
-*(Para visualizar os diagramas completos de fluxo e modelagem, acesse os arquivos na pasta [docs/](./docs/))*
+*(Os diagramas visuais detalhados de cada camada estão disponíveis na pasta [docs/](./docs/))*
 
 ---
 
@@ -41,24 +41,27 @@ A arquitetura segue o padrão Medallion em três camadas principais para garanti
 
 ```text
 sql-data-warehouse-project/
-├── docs/                       # Documentação e diagramas do projeto (Mermaid)
-│   ├── data_architecture.md    # Diagrama de ingestão de dados
+├── docs/                       # Documentação técnica e diagramas (Mermaid)
+│   ├── data_architecture.md    # Diagrama de ingestão de dados (Sources -> Bronze)
 │   ├── data_flow.md            # Fluxo completo de ponta a ponta
-│   ├── data_integration.md     # Mapeamento de chaves (ERP + CRM)
-│   ├── data_model.md           # Modelagem Star Schema (ERD)
-│   ├── ETL.md                  # Fluxo de limpeza Bronze -> Silver
+│   ├── data_integration.md     # Mapeamento de chaves e relacionamentos (ERP + CRM)
+│   ├── data_model.md           # Modelagem dimensional Star Schema (ERD)
+│   ├── ETL.md                  # Mapeamento do fluxo Bronze -> Silver
 │   └── data_catalog.md         # Dicionário de dados da camada Gold
-├── scripts/                    # Scripts SQL para criação de tabelas e views
+├── scripts/                    # Scripts SQL organizados por camada
 │   ├── bronze/
 │   ├── silver/
 │   └── gold/
-├── tests/                      # Scripts de Quality Checks (testes de integridade)
+├── tests/                      # Scripts de testes e integridade de dados
 │   ├── quality_checks_silver.sql
 │   └── quality_checks_gold.sql
-└── README.md                   # Visão geral do projeto
+└── README.md                   # Documentação principal do repositório
+```
+
+---
 
 ## 🌟 Sobre Mim
 
-Eu sou o Davi Magliari, estudante de Tecnologia em Banco de Dados na Universidade Presbiteriana Mackenzie.
+Eu sou o **Davi Magliari**, estudante de Tecnologia em Banco de Dados na **Universidade Presbiteriana Mackenzie**.
 
 Desenvolvo projetos práticos com foco em Engenharia e Análise de Dados para consolidar conceitos de arquitetura de dados, modelagem dimensional e otimização de queries, preparando meu perfil para os desafios reais e técnicos do mercado de tecnologia.
